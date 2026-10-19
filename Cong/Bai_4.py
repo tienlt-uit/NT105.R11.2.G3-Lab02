@@ -23,7 +23,7 @@ for ax, k_max in zip(axes, (1, 3, 9, 25)):
 axes[-1].set_xlabel("Thoi gian (s)")
 fig.suptitle("Cang nhieu song Harmonic, cang gan song vuong")
 fig.tight_layout()
-fig.savefig("square_synth.png", dpi=250)
+fig.savefig("Bài 4-1.png", dpi=250)
 
 k_nyq = int((fs / 2 / f0 + 1) // 2)
 print("k_max lon nhat thoa Nyquist:", k_nyq)
@@ -37,7 +37,7 @@ for ax, k in zip(axes3, (k_nyq, 150)):
     ax.grid(True)
 axes3[-1].set_xlabel("Thoi gian (s)")
 fig3.tight_layout()
-fig3.savefig("nyquist_so_sanh.png", dpi=130)
+fig3.savefig("Bài 4-2.png", dpi=130)
 
 
 fig4, axes4 = plt.subplots(2, 1, figsize=(8, 6), sharex=True)
@@ -66,5 +66,5 @@ for ax, k in zip(axes4, (k_nyq, 150)):
 
 axes4[-1].set_xlabel("Tan so (Hz)")
 fig4.tight_layout()
-fig4.savefig("nyquist_pho.png", dpi=130)
+fig4.savefig("Bài 4-3.png", dpi=130)
 plt.show()

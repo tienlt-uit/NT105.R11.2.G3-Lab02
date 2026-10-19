@@ -27,7 +27,7 @@ ax1.legend(l1 + l2, n1 + n2, loc="upper center",
            bbox_to_anchor=(0.5, -0.15), ncol=2)
 ax1.set_title("Suy hao khong gian tu do va cong suat thu tai 2.4 GHz")
 fig.tight_layout()
-fig.savefig("bai5.png", dpi=130)
+fig.savefig("Bài 5.png", dpi=130)
 
 for dd in (1, 50, 1000, 5000):
     fsl = 20 * np.log10(4 * np.pi * dd * f / c)

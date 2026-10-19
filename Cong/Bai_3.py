@@ -41,7 +41,7 @@ axes[2].grid(True)
 
 
 fig.tight_layout()
-fig.savefig("Sóng vuông 100Hz voi ba ti le mau o muc cao khac nhau.png")
+fig.savefig("Bài 3-1.png")
 
 ######################################
 #Phổ một bên
@@ -67,6 +67,6 @@ for i in range (3):
     print(names[i], "- vach DC:", round(mag[0], 3), "| np.mean:", round(np.mean(waves[i]), 3))
 
 fig2.tight_layout()
-fig2.savefig("Pho mot ben song vuong.png", dpi=250)
+fig2.savefig("Bài 3-2.png", dpi=250)
 
 plt.show()

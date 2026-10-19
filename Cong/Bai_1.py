@@ -2,15 +2,16 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy import signal
 
+rng = np.random.default_rng(0)
 #Tín hiệu tương tự
-t1 = np.linspace(0, 1, 1000)
-f = 5  # tần số của tín hiệu
-analog_signal = np.sin(2 * np.pi * f * t1)
+t1 = np.linspace(0, 1.0, 201)
+x = 4 + 0.5 * np.sin(2 * np.pi * 3 * t1)
+x = x + 0.1 * rng.standard_normal(201)
 
 
 
 #Tín hiệu số
-bits = np.array([1, 0, 1, 1, 0, 0, 1, 0])
+bits = np.array([1, 1, 0, 1, 0, 0 , 1, 0])
 samples_per_bit = 50
 wave = np.repeat(bits, samples_per_bit)
 t2 = np.arange(wave.size) / samples_per_bit
@@ -33,7 +34,7 @@ print("So chu ky trong cua so 0.1 s:", 0.1 / period)
 
 fig, axes = plt.subplots(3, 1, figsize=(8, 7))
 
-axes[0].plot(t1, analog_signal)
+axes[0].plot(t1, x)
 axes[0].set_title("Tin hieu tuong tu")
 axes[0].set_xlabel("Thoi gian (s)")
 axes[0].set_ylabel("Bien do (V)")
@@ -54,6 +55,6 @@ axes[2].set_ylabel("Bien do (V)")
 axes[2].grid(True)
 
 fig.tight_layout()
-fig.savefig("Ba tín hiệu.png")
+fig.savefig("Bài 1.png")
 plt.show()
 

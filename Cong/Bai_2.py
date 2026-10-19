@@ -23,5 +23,5 @@ plt.legend(loc="upper right")
 plt.grid(True)
 plt.tight_layout()
 
-plt.savefig("Song sin 50Hz voi bon gia tri pha ban dau.png")
+plt.savefig("Bài 2.png")
 plt.show()
